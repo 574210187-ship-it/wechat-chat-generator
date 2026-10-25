@@ -94,13 +94,13 @@
     },
     {
       "path": "tests/test_chatflow.py",
-      "bytes": 5324,
-      "sha256": "153f14ff1ba902decc1cb94226a5018e39e9716279f7c353aef8748b8b41da03"
+      "bytes": 5878,
+      "sha256": "359e61b78692b4818d43a12a66e2d452d39f7c224ee383079c7aa1e2c2dd7808"
     },
     {
       "path": "tools/render_wechat_capture.py",
-      "bytes": 16714,
-      "sha256": "f400a93498cf8e18c7e7265b526395cb3cbe7e43f348c6cb3480c7695d2a3a20"
+      "bytes": 17289,
+      "sha256": "ba73ca9ecd844b9e15ff32715ad9b0c2113c08a7380a981922158097b720e40b"
     }
   ]
 }

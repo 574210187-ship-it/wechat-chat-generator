@@ -94,6 +94,11 @@ class ChatFlowTests(unittest.TestCase):
             result = subprocess.run([sys.executable, str(FLOW), "--project", str(project), "--run-dir", str(run_dir), "--mode", "AUTO", "--scroll", "--duration", "0.6"], capture_output=True, text=True)
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertGreater((run_dir / "chat-scroll-3s.mp4").stat().st_size, 1000)
+            self.assertFalse(list((run_dir / "scroll-frames").glob("*.png")) == [])
+            self.assertFalse(any(path.stat().st_size == 0 for path in (run_dir / "scroll-frames").glob("*.png")))
+            probe = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", str(run_dir / "chat-scroll-3s.mp4")], capture_output=True, text=True)
+            self.assertEqual(probe.returncode, 0, probe.stderr)
+            self.assertAlmostEqual(float(probe.stdout.strip()), 0.6, places=2)
 
 
 if __name__ == "__main__":

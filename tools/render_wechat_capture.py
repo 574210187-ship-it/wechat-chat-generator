@@ -279,7 +279,13 @@ def screen_from_offset(content: Image.Image, offset: int, project: dict[str, Any
 
 
 def save_png(image: Image.Image, path: Path) -> None:
-    image.save(path, "PNG", optimize=True)
+    # Pillow can occasionally leave an empty target on interrupted/slow filesystems.
+    # Render to a sibling temporary file first, verify it, then atomically publish it.
+    temporary = path.with_name(f".{path.name}.tmp")
+    image.save(temporary, format="PNG", optimize=True)
+    if not temporary.exists() or temporary.stat().st_size == 0:
+        raise RuntimeError(f"PNG frame write failed: {path.name}")
+    temporary.replace(path)
 
 
 def make_scroll(content: Image.Image, project: dict[str, Any], colors: dict[str, str], font_path: str | None, output_dir: Path, duration: float) -> tuple[str, int]:
@@ -295,10 +301,14 @@ def make_scroll(content: Image.Image, project: dict[str, Any], colors: dict[str,
         offset = int(scroll_range * eased)
         frame = screen_from_offset(content, offset, project, colors, font_path)
         save_png(frame, frames_dir / f"{index:04d}.png")
+    for temporary in frames_dir.glob(".*.tmp"):
+        temporary.unlink(missing_ok=True)
     video = output_dir / "chat-scroll-3s.mp4"
     command = ["ffmpeg", "-y", "-framerate", "30", "-i", str(frames_dir / "%04d.png"), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(video)]
     result = subprocess.run(command, capture_output=True, text=True)
     (output_dir / "ffmpeg.log").write_text(result.stderr, encoding="utf-8")
+    for temporary in frames_dir.glob(".*.tmp"):
+        temporary.unlink(missing_ok=True)
     if result.returncode != 0:
         raise RuntimeError("ffmpeg could not create scroll video; see ffmpeg.log")
     return video.name, scroll_range

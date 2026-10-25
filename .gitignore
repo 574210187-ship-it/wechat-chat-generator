@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+node_modules/
+dist/
+runs/
+assets/private/
+assets/source/
+*.mp4
+*.mov
+*.zip

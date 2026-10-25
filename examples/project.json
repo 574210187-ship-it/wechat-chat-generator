@@ -1,0 +1,17 @@
+{
+  "title": "Project chat",
+  "theme": "light",
+  "chrome": "full",
+  "participants": {
+    "left": {"name": "Client", "avatar": null},
+    "right": {"name": "Advisor", "avatar": null}
+  },
+  "messages": [
+    {"side": "left", "type": "text", "text": "Hello, can you confirm the time?"},
+    {"side": "right", "type": "text", "text": "Yes, I will send it at three."},
+    {"type": "system", "text": "Today 14:30"},
+    {"side": "left", "type": "text", "text": "Great, thank you."},
+    {"side": "right", "type": "transfer", "amount": "$0.10", "note": "Demo transfer"},
+    {"side": "left", "type": "video", "duration": "0:30"}
+  ]
+}

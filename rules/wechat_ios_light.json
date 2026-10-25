@@ -1,0 +1,10 @@
+{
+  "id": "wechat-ios-393x852-generic-v1",
+  "canvas": {"width": 1296, "height": 2304, "aspect_ratio": "9:16"},
+  "geometry": {"header_height": 232, "input_height": 252, "avatar_size": 108, "bubble_gap": 26},
+  "themes": {
+    "light": {"background": "#ededed", "left_bubble": "#ffffff", "right_bubble": "#95ec69"},
+    "dark": {"background": "#111111", "left_bubble": "#2d2d2d", "right_bubble": "#28c461"}
+  },
+  "reference_policy": "Reference path only; measure and encode values deliberately. Do not OCR or auto-infer identities or content."
+}

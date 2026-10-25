@@ -1,0 +1,5 @@
+# Use LEFT: / RIGHT: for a fast plain-text project.
+LEFT: Hello, can you confirm the time?
+RIGHT: Yes, I will send it at three.
+SYSTEM: Today 14:30
+LEFT: Thank you.

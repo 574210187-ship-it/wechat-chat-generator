@@ -1,0 +1,19 @@
+{
+  "title": "Scroll demo",
+  "theme": "dark",
+  "chrome": "full",
+  "participants": {
+    "left": {"name": "Client", "avatar": null},
+    "right": {"name": "Advisor", "avatar": null}
+  },
+  "messages": [
+    {"side": "left", "type": "text", "text": "First message for the downward scroll test."},
+    {"side": "right", "type": "text", "text": "Received. This is the reply."},
+    {"side": "left", "type": "text", "text": "This paragraph creates a longer conversation area."},
+    {"side": "right", "type": "text", "text": "The top naturally leaves frame while the lower messages enter."},
+    {"side": "left", "type": "gif"},
+    {"side": "right", "type": "text", "text": "This is a generated layout, not a platform record."},
+    {"side": "left", "type": "video", "duration": "0:30"},
+    {"side": "right", "type": "text", "text": "The final message ensures a visible scroll range."}
+  ]
+}

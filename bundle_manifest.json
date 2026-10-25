@@ -1,0 +1,106 @@
+{
+  "format": 1,
+  "file_count": 20,
+  "files": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "bytes": 397,
+      "sha256": "19d1687576245832c094b385030a04b90d70743e153e68c986a70676a9ef0e84"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 115,
+      "sha256": "3b36ef7e336ffc01ba652c158dea1c6859af3a3f9e65bd6025b5489327c0f7cf"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1028,
+      "sha256": "e5b5f7d7f550e1bbd1903ba23ee34e65e2f4c9ed4305e4f57a4cc12e62c3dfaa"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 268,
+      "sha256": "ec0117ac2bdb88853a5be4cce0093a3c425a7dc1e9c6948e0786ca72dda4ea69"
+    },
+    {
+      "path": "CHATGPT_CODEX_PROMPT.md",
+      "bytes": 1726,
+      "sha256": "ebd20a1f05ca09c1381242dcfddd754dbee62a5c3200132167a81a1b44ed037b"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1074,
+      "sha256": "48af1b6fec20785c29d3b0ae1c54a639b13120770aaa4bf6e71e1d6000f62c4a"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 160,
+      "sha256": "5742663e83e01328d7175e18226b5ef9dc9a978b03d6ac44e16721eb435e7967"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5301,
+      "sha256": "ece3fd86304b023f2717d96896319184d022b4259a15d2e8cbb74393b58bd448"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 484,
+      "sha256": "cd4c83b25a52738866e0443b4d99ee56f87cace4e156c567525425af1b7524e3"
+    },
+    {
+      "path": "chatflow.py",
+      "bytes": 14408,
+      "sha256": "da77344e13713289e7c17ab6c8f3c69bc8fbb0814cbde58938e7380f63fd5028"
+    },
+    {
+      "path": "examples/conversation.txt",
+      "bytes": 165,
+      "sha256": "d178c68008df1e442afd4cabc8b20c0123961beb7ef3c3768935278a5de4f153"
+    },
+    {
+      "path": "examples/project.json",
+      "bytes": 634,
+      "sha256": "959e7da523498585945dd70e4e47cf1a4f16bebf280bf5cbf55635dd46c8ade8"
+    },
+    {
+      "path": "examples/scroll-project.json",
+      "bytes": 892,
+      "sha256": "4c0052176539cf853a6c5b15f22cfcae551a0a237190f37220f720ea6d310e80"
+    },
+    {
+      "path": "make_bundle_manifest.py",
+      "bytes": 1003,
+      "sha256": "b4783ade6c01ba27619aa0a57dad6c4f85aae3b6c8d1aac40c5e8ba3d1510250"
+    },
+    {
+      "path": "release_audit.py",
+      "bytes": 1982,
+      "sha256": "b333dbb10a5f4f4cce05c0d6d31aff2300516e9160718b38c3b5f1ee45a3a045"
+    },
+    {
+      "path": "release_verify.py",
+      "bytes": 1135,
+      "sha256": "42d3fc86ee124ef436b86be3d36e7689b9d26e44c2f6a76095847d512427bd2d"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 15,
+      "sha256": "e36848f673847de9ea26fbde287f64d9f34bb0fe7b0546beeeb612148544c4d8"
+    },
+    {
+      "path": "rules/wechat_ios_light.json",
+      "bytes": 547,
+      "sha256": "2b2dcc7e499e347b852d2f42187662c1a0bb54743311c36e7886afabc17c9c94"
+    },
+    {
+      "path": "tests/test_chatflow.py",
+      "bytes": 5324,
+      "sha256": "153f14ff1ba902decc1cb94226a5018e39e9716279f7c353aef8748b8b41da03"
+    },
+    {
+      "path": "tools/render_wechat_capture.py",
+      "bytes": 16714,
+      "sha256": "f400a93498cf8e18c7e7265b526395cb3cbe7e43f348c6cb3480c7695d2a3a20"
+    }
+  ]
+}
